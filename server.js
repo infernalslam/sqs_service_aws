@@ -8,6 +8,10 @@ var queueUrl = ''
 var receipt = ''
 
 
+aws.config.loadFromPath(__dirname + '/key.json')
+var sqs = new aws.SQS()
+
+
 app.use(cors())
 app.use(bodyParser.json())
 
